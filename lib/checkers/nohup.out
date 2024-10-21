@@ -1,0 +1,155 @@
+No "haiku" available.
+No "macintosh" available.
+No "breeze" available.
+Set style "fusion"
+krita.lib.resources: Created table "version_information"
+krita.lib.resources: Created table "storage_types"
+krita.lib.resources: Created table "resource_types"
+krita.lib.resources: Created table "storages"
+krita.lib.resources: Created table "tags"
+krita.lib.resources: Created table "resources"
+krita.lib.resources: Created table "versioned_resources"
+krita.lib.resources: Created table "resource_tags"
+krita.lib.resources: Created table "metadata"
+krita.lib.resources: Created table "tags_storages"
+krita.lib.resources: Created table "tag_translations"
+krita.lib.resources: Created table "storages"
+krita.lib.resources: Created table "versioned_resources"
+krita.lib.resources: Created table "tags"
+krita.lib.resources: Created table "resources"
+krita.lib.resources: Created table "tag_translations"
+krita.lib.resources: Created table "resource_tags"
+krita.lib.resources: Created table "resources_signature"
+krita.lib.resources: Filled lookup table storage_types
+krita.lib.resources: Filled lookup table resource_types
+krita.lib.resources: Filled version table
+QObject::startTimer: Timers cannot have negative intervals
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/lib/krita-python-libs/krita added to PYTHONPATH
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/comics_exporter.py:423: SyntaxWarning: invalid escape sequence '\d'
+  """
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/exporters/CPMT_ACBF_XML_Exporter.py:510: SyntaxWarning: invalid escape sequence '\<'
+  string = re.sub("\<\/*?text.*?\>",'', str(v["text"]))
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/exporters/CPMT_ACBF_XML_Exporter.py:511: SyntaxWarning: invalid escape sequence '\s'
+  string = re.sub("\s+?", " ", string)
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/exporters/CPMT_po_parser.py:49: SyntaxWarning: invalid escape sequence '\<'
+  text = re.sub("\<.*?\>", " ", text)
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/exporters/CPMT_po_parser.py:50: SyntaxWarning: invalid escape sequence '\s'
+  key += str(re.sub("\s+", " ", text)).strip()
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/exporters/CPMT_po_parser.py:114: SyntaxWarning: invalid escape sequence '\<'
+  key = re.sub("\<.*?\>", " ", key)
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/comics_project_management_tools/exporters/CPMT_po_parser.py:115: SyntaxWarning: invalid escape sequence '\s'
+  key = re.sub("\s+", " ", key)
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:33: SyntaxWarning: invalid escape sequence '\+'
+  '\+', '-', '\*', '/', '//', '\%', '\*\*',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:33: SyntaxWarning: invalid escape sequence '\*'
+  '\+', '-', '\*', '/', '//', '\%', '\*\*',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:33: SyntaxWarning: invalid escape sequence '\%'
+  '\+', '-', '\*', '/', '//', '\%', '\*\*',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:33: SyntaxWarning: invalid escape sequence '\*'
+  '\+', '-', '\*', '/', '//', '\%', '\*\*',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:35: SyntaxWarning: invalid escape sequence '\+'
+  '\+=', '-=', '\*=', '/=', '\%=',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:35: SyntaxWarning: invalid escape sequence '\*'
+  '\+=', '-=', '\*=', '/=', '\%=',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:35: SyntaxWarning: invalid escape sequence '\%'
+  '\+=', '-=', '\*=', '/=', '\%=',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:37: SyntaxWarning: invalid escape sequence '\^'
+  '\^', '\|', '\&', '\~', '>>', '<<',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:37: SyntaxWarning: invalid escape sequence '\|'
+  '\^', '\|', '\&', '\~', '>>', '<<',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:37: SyntaxWarning: invalid escape sequence '\&'
+  '\^', '\|', '\&', '\~', '>>', '<<',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:37: SyntaxWarning: invalid escape sequence '\~'
+  '\^', '\|', '\&', '\~', '>>', '<<',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:42: SyntaxWarning: invalid escape sequence '\{'
+  '\{', '\}', '\(', '\)', '\[', '\]',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:42: SyntaxWarning: invalid escape sequence '\}'
+  '\{', '\}', '\(', '\)', '\[', '\]',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:42: SyntaxWarning: invalid escape sequence '\('
+  '\{', '\}', '\(', '\)', '\[', '\]',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:42: SyntaxWarning: invalid escape sequence '\)'
+  '\{', '\}', '\(', '\)', '\[', '\]',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:42: SyntaxWarning: invalid escape sequence '\['
+  '\{', '\}', '\(', '\)', '\[', '\]',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/syntax/syntax.py:42: SyntaxWarning: invalid escape sequence '\]'
+  '\{', '\}', '\(', '\)', '\[', '\]',
+/nix/store/ncjhn5ya6yb1dg1pcfzi7wcschwyzh33-krita-unwrapped-5.2.6/share/krita/pykrita/scripter/ui_scripter/editor/pythoneditor.py:274: SyntaxWarning: invalid escape sequence '\)'
+  """The return key has just been pressed (and processed by the editor)
+qt.xkb.compose: failed to create compose table
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 2 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !
+krita.general: Unexpected tool event has come to endStroke while being mode 0 !
+krita.general: Unexpected tool event has come to cancelStroke while being mode 0 !

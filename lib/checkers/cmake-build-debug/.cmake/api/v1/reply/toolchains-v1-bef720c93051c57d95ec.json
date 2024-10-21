@@ -1,0 +1,123 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "Clang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include",
+						"/nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include",
+						"/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/usr/lib",
+						"/usr/lib32",
+						"/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0",
+						"/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib",
+						"/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib",
+						"/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64",
+						"/lib64",
+						"/usr/lib64",
+						"/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"gcc",
+						"gcc_s",
+						"c",
+						"gcc",
+						"gcc_s"
+					]
+				},
+				"path" : "/run/current-system/sw/bin/cc",
+				"version" : "18.1.8"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "Clang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu",
+						"/nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include",
+						"/nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include",
+						"/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/usr/lib",
+						"/usr/lib32",
+						"/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0",
+						"/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib",
+						"/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib",
+						"/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0",
+						"/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64",
+						"/lib64",
+						"/usr/lib64",
+						"/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"m",
+						"gcc_s",
+						"gcc",
+						"c",
+						"gcc_s",
+						"gcc"
+					]
+				},
+				"path" : "/run/current-system/sw/bin/c++",
+				"version" : "18.1.8"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

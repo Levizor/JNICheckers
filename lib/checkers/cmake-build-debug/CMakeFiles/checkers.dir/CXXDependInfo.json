@@ -1,0 +1,22 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug",
+	"dir-cur-src" : "/home/levizor/Projects/JNICheckers/java/lib/checkers",
+	"dir-top-bld" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug",
+	"dir-top-src" : "/home/levizor/Projects/JNICheckers/java/lib/checkers",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/home/levizor/.jdks/openjdk-23/include",
+		"/home/levizor/.jdks/openjdk-23/include/linux"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir"
+}

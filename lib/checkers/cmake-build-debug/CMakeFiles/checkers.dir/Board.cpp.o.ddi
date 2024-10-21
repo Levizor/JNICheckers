@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/checkers.dir/Board.cpp.o"
+    }
+  ],
+  "version": 1
+}
