@@ -5,10 +5,10 @@
 	"compiler-simulate-id" : "",
 	"config" : "Debug",
 	"cxx-modules" : {},
-	"dir-cur-bld" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug",
-	"dir-cur-src" : "/home/levizor/Projects/JNICheckers/java/lib/checkers",
-	"dir-top-bld" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug",
-	"dir-top-src" : "/home/levizor/Projects/JNICheckers/java/lib/checkers",
+	"dir-cur-bld" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug",
+	"dir-cur-src" : "/home/levizor/Projects/JNICheckers/lib/checkers",
+	"dir-top-bld" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug",
+	"dir-top-src" : "/home/levizor/Projects/JNICheckers/lib/checkers",
 	"exports" : [],
 	"forward-modules-from-target-dirs" : [],
 	"include-dirs" : 
@@ -18,5 +18,5 @@
 	],
 	"language" : "CXX",
 	"linked-target-dirs" : [],
-	"module-dir" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir"
+	"module-dir" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir"
 }

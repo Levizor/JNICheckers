@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is Clang, found in:
-        /home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.out
+        /home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.out
       
   -
     kind: "message-v1"
@@ -50,7 +50,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is Clang, found in:
-        /home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.out
+        /home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.out
       
   -
     kind: "try_compile-v1"
@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi"
-      binary: "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi"
+      source: "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT"
+      binary: "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/run/current-system/sw/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
@@ -72,10 +72,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi'
+        Change Dir: '/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT'
         
-        Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_f77c3
-        [1/2] /run/current-system/sw/bin/cc   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_dab94
+        [1/2] /run/current-system/sw/bin/cc   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c
         clang version 18.1.8
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -86,7 +86,7 @@ events:
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
          (in-process)
-         "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang-18" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -x c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+         "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang-18" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -x c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c
         clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-unknown-linux-gnu
         #include "..." search starts here:
         #include <...> search starts here:
@@ -94,7 +94,7 @@ events:
          /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include
          /usr/include
         End of search list.
-        [2/2] : && /run/current-system/sw/bin/cc  -v -Wl,-v CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -o cmTC_f77c3   && :
+        [2/2] : && /run/current-system/sw/bin/cc  -v -Wl,-v CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -o cmTC_dab94   && :
         clang version 18.1.8
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -104,7 +104,7 @@ events:
         Selected GCC installation: /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
-         "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_f77c3 /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o
+         "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_dab94 /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o
         GNU ld (GNU Binutils) 2.42
         
       exitCode: 0
@@ -138,10 +138,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi']
+        ignore line: [Change Dir: '/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT']
         ignore line: []
-        ignore line: [Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_f77c3]
-        ignore line: [[1/2] /run/current-system/sw/bin/cc   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_dab94]
+        ignore line: [[1/2] /run/current-system/sw/bin/cc   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -154,7 +154,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang-18" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yTdiDi -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -x c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang-18" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ydvOLT -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -x c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-unknown-linux-gnu]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
@@ -162,7 +162,7 @@ events:
         ignore line: [ /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /run/current-system/sw/bin/cc  -v -Wl -v CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -o cmTC_f77c3   && :]
+        ignore line: [[2/2] : && /run/current-system/sw/bin/cc  -v -Wl -v CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -o cmTC_dab94   && :]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -174,7 +174,7 @@ events:
         ignore line: [@m64]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_f77c3 /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o]
+        link line: [ "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_dab94 /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o]
           arg [/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld] ==> ignore
           arg [--hash-style=gnu] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
@@ -182,7 +182,7 @@ events:
           arg [elf_x86_64] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f77c3] ==> ignore
+          arg [cmTC_dab94] ==> ignore
           arg [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o] ==> obj [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o]
           arg [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o] ==> obj [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o]
           arg [/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o] ==> obj [/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o]
@@ -204,7 +204,7 @@ events:
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_f77c3.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_dab94.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--as-needed] ==> ignore
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -258,8 +258,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2"
-      binary: "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2"
+      source: "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2"
+      binary: "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/run/current-system/sw/bin/clang-scan-deps"
       CMAKE_CXX_FLAGS: ""
@@ -270,10 +270,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2'
+        Change Dir: '/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2'
         
-        Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_75973
-        [1/2] /run/current-system/sw/bin/c++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_87eae
+        [1/2] /run/current-system/sw/bin/c++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
         clang version 18.1.8
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -284,7 +284,7 @@ events:
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
          (in-process)
-         "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2 -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2 -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0 -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+         "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2 -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2 -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0 -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-unknown-linux-gnu
         #include "..." search starts here:
         #include <...> search starts here:
@@ -294,7 +294,7 @@ events:
          /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include
          /usr/include
         End of search list.
-        [2/2] : && /run/current-system/sw/bin/c++  -v -Wl,-v CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_75973   && :
+        [2/2] : && /run/current-system/sw/bin/c++  -v -Wl,-v CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_87eae   && :
         clang version 18.1.8
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -304,7 +304,7 @@ events:
         Selected GCC installation: /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
-         "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_75973 /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o
+         "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_87eae /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o
         GNU ld (GNU Binutils) 2.42
         
       exitCode: 0
@@ -342,10 +342,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2']
+        ignore line: [Change Dir: '/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2']
         ignore line: []
-        ignore line: [Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_75973]
-        ignore line: [[1/2] /run/current-system/sw/bin/c++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_87eae]
+        ignore line: [[1/2] /run/current-system/sw/bin/c++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -c /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -358,7 +358,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2 -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qdzHj2 -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0 -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/nix/store/bgs9im0bhq5a2zrnnv01ivg8240kyzis-clang-18.1.8/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2 -v -fcoverage-compilation-dir=/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GNmAV2 -nostdsysteminc -resource-dir /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root -dependency-file CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include -idirafter /usr/include -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0 -isystem /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu -internal-isystem /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/levizor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-unknown-linux-gnu]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
@@ -368,7 +368,7 @@ events:
         ignore line: [ /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /run/current-system/sw/bin/c++  -v -Wl -v CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_75973   && :]
+        ignore line: [[2/2] : && /run/current-system/sw/bin/c++  -v -Wl -v CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_87eae   && :]
         ignore line: [clang version 18.1.8]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -380,7 +380,7 @@ events:
         ignore line: [@m64]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_75973 /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o]
+        link line: [ "/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_87eae /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o -L/usr/lib -L/usr/lib32 -L/usr/lib -L/usr/lib32 -L/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/22nxhmsfcv2q2rpkmfvzwg2w5z1l231z-gcc-13.3.0-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0//lib -L/nix/store/q0iz2x35ki1aaqpjagjfi8s7q053cmc5-gcc-13.3.0-libgcc/lib -L/nix/store/p3bv60x7rzlnfz7ms7i1rm5ps0481idg-clang-18.1.8-lib/lib -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib64/gcc/x86_64-unknown-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtendS.o /nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crtn.o]
           arg [/nix/store/yp6j8185dlkljgcdl0xsf73dr7mv1v1y-binutils-wrapper-2.42/bin/ld] ==> ignore
           arg [--hash-style=gnu] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
@@ -388,7 +388,7 @@ events:
           arg [elf_x86_64] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_75973] ==> ignore
+          arg [cmTC_87eae] ==> ignore
           arg [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o] ==> obj [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/Scrt1.o]
           arg [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o] ==> obj [/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/crti.o]
           arg [/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o] ==> obj [/nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0/crtbeginS.o]
@@ -410,7 +410,7 @@ events:
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-dynamic-linker=/nix/store/3dyw8dzj9ab4m8hv5dpyx7zii8d0w6fi-glibc-2.39-52/lib/ld-linux-x86-64.so.2] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_75973.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_87eae.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]

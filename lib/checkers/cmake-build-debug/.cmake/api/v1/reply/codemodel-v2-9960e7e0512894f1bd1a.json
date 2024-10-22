@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug",
-		"source" : "/home/levizor/Projects/JNICheckers/java/lib/checkers"
+		"build" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug",
+		"source" : "/home/levizor/Projects/JNICheckers/lib/checkers"
 	},
 	"version" : 
 	{

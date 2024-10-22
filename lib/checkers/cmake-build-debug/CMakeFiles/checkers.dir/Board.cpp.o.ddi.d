@@ -1,7 +1,7 @@
 CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
-  /home/levizor/Projects/JNICheckers/java/lib/checkers/Board.cpp \
-  /home/levizor/Projects/JNICheckers/java/lib/checkers/Board.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/iostream \
+  /home/levizor/Projects/JNICheckers/lib/checkers/Board.cpp \
+  /home/levizor/Projects/JNICheckers/lib/checkers/Board.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/vector \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/requires_hosted.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
@@ -16,21 +16,78 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/gnu/stubs-64.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/pstl/pstl_config.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_algobase.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/functexcept.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/exception_defines.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/cpp_type_traits.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/type_traits.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/numeric_traits.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_pair.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/type_traits \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/move.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/utility.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/compare \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/concepts \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_iterator_base_types.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/iterator_concepts.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ptr_traits.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ranges_cmp.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_iterator_base_funcs.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/concept_check.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/debug/assertions.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_iterator.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/new \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/exception.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_construct.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/debug/debug.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/predefined_ops.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bit \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/allocator.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/c++allocator.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/new_allocator.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/memoryfwd.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_uninitialized.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/alloc_traits.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/alloc_traits.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_vector.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/initializer_list \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_bvector.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/functional_hash.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/hash_bytes.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/refwrap.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/invoke.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_function.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/backward/binders.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/range_access.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/vector.tcc \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/memory_resource.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/cstddef \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/stddef.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_ptrdiff_t.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_size_t.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_wchar_t.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_null.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_nullptr_t.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_max_align_t.h \
+  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_offsetof.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/uses_allocator.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/uses_allocator_args.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/tuple \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ranges_util.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ranges_base.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/max_size_type.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/numbers \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/iostream \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ostream \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ios \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/iosfwd \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stringfwd.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/memoryfwd.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/postypes.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/cwchar \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/wchar.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/libc-header-start.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/floatn.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/floatn-common.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/stddef.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_size_t.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_wchar_t.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_null.h \
   /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/stdarg.h \
   /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stdarg___gnuc_va_list.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/wchar.h \
@@ -42,31 +99,11 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/types/locale_t.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/types/__locale_t.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/exception \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/exception.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/exception_ptr.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/exception_defines.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/cxxabi_init_exception.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_ptrdiff_t.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_nullptr_t.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_max_align_t.h \
-  /nix/store/4rz4z2bkb68vwbdxcwq0jxh2fyhhiqkh-clang-wrapper-18.1.8/resource-root/include/__stddef_offsetof.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/typeinfo \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/hash_bytes.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/new \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/move.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/type_traits \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/nested_exception.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/char_traits.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/compare \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/concepts \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_construct.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_iterator_base_types.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/iterator_concepts.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ptr_traits.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ranges_cmp.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_iterator_base_funcs.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/concept_check.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/debug/assertions.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/localefwd.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/c++locale.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/clocale \
@@ -113,36 +150,10 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/sys/single_threaded.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/locale_classes.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/string \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/allocator.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/c++allocator.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/new_allocator.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/functexcept.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/cpp_type_traits.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ostream_insert.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/cxxabi_forced.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_iterator.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/type_traits.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_function.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/backward/binders.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/numeric_traits.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_algobase.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_pair.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/utility.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/debug/debug.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/predefined_ops.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bit \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/refwrap.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/invoke.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/range_access.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/initializer_list \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/basic_string.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/alloc_traits.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/alloc_traits.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/string_view \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/functional_hash.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ranges_base.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/max_size_type.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/numbers \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/string_view.tcc \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/ext/string_conversions.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/cstdlib \
@@ -177,12 +188,6 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/types/error_t.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/charconv.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/basic_string.tcc \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/memory_resource.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/cstddef \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/uses_allocator.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/uses_allocator_args.h \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/tuple \
-  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ranges_util.h \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/locale_classes.tcc \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/system_error \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/error_constants.h \

@@ -4,10 +4,11 @@
 
 #ifndef BOARD_H
 #define BOARD_H
+#include <vector>
 
 
 enum Checker {
-    null=0,
+    blank=0,
     blackman=1,
     whiteman=2,
     blackking=3,
@@ -20,10 +21,13 @@ public:
     int table[8][8];
     Board();
     bool makeMove(const int from[], const int to[]);
+    std::vector<int[2]> getPossibleActions(const int[]);
+    std::vector<int[2]> getPossibleMoves(const int[], const Checker&);
+    std::vector<int[2]> getPossibleCaptures(const int[], const Checker&);
 
 private:
 
-    bool rightTurn(const Checker& checker);
+    bool rightTurn(const int& checker);
 };
 
 

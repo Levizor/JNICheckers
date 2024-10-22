@@ -1,6 +1,6 @@
 CMakeFiles/checkers.dir/library.cpp.o.ddi: \
-  /home/levizor/Projects/JNICheckers/java/lib/checkers/library.cpp \
-  /home/levizor/Projects/JNICheckers/java/lib/checkers/library.h \
+  /home/levizor/Projects/JNICheckers/lib/checkers/library.cpp \
+  /home/levizor/Projects/JNICheckers/lib/checkers/library.h \
   /home/levizor/.jdks/openjdk-23/include/jni.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/stdio.h \
   /nix/store/wlavaybjbzgllhq11lib6qgr7rm8imgp-glibc-2.39-52-dev/include/bits/libc-header-start.h \
@@ -208,4 +208,9 @@ CMakeFiles/checkers.dir/library.cpp.o.ddi: \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/ostream.tcc \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/istream \
   /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/istream.tcc \
-  /home/levizor/Projects/JNICheckers/java/lib/checkers/Board.h
+  /home/levizor/Projects/JNICheckers/lib/checkers/Board.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/vector \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_uninitialized.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_vector.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/stl_bvector.h \
+  /nix/store/x8rg4vhgd20i8vzykm1196f9qdb8klhh-gcc-13.3.0/include/c++/13.3.0/bits/vector.tcc

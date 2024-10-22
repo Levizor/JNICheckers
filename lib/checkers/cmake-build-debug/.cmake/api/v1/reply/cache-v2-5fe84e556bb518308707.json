@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug"
+			"value" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -635,7 +635,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/levizor/Projects/JNICheckers/java/lib/checkers"
+			"value" : "/home/levizor/Projects/JNICheckers/lib/checkers"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1195,7 +1195,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/levizor/Projects/JNICheckers/java/lib/checkers/cmake-build-debug"
+			"value" : "/home/levizor/Projects/JNICheckers/lib/checkers/cmake-build-debug"
 		},
 		{
 			"name" : "checkers_IS_TOP_LEVEL",
@@ -1219,7 +1219,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/levizor/Projects/JNICheckers/java/lib/checkers"
+			"value" : "/home/levizor/Projects/JNICheckers/lib/checkers"
 		}
 	],
 	"kind" : "cache",
