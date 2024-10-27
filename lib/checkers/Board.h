@@ -15,18 +15,28 @@ enum Checker {
     whiteking=4,
 };
 
+enum State {
+    moved=0,
+    captured=1,
+    blackwon=2,
+    whitewon=3,
+    tie=4
+};
+
 class Board {
 public:
     int queue=0;
     int table[8][8];
     Board();
-    bool makeMove(const int from[], const int to[]);
-    std::vector<int[2]> getPossibleActions(const int[]);
-    std::vector<int[2]> getPossibleMoves(const int[], const Checker&);
-    std::vector<int[2]> getPossibleCaptures(const int[], const Checker&);
+    int makeMove(std::array<int, 2>& from, std::array<int, 2>& to);
+    std::vector<std::array<int, 2>> getPossibleActions(std::array<int, 2>);
 
 private:
-
+    std::vector<std::array<int, 2>> pendingCaptures;
+    std::vector<std::array<int, 2>> getPossibleMoves(const int[], const Checker&);
+    std::vector<std::array<int, 2>> getPossibleCaptures(const int[], const Checker&);
+    bool moveIsCapture(const std::array<int,2>& from, const std::array<int, 2>& to);
+    State evaluate();
     bool rightTurn(const int& checker);
 };
 

@@ -3,7 +3,7 @@
 //
 
 #include "Board.h"
-
+#include <array>
 #include <iostream>
 
 //init checkers positions on the table
@@ -21,19 +21,6 @@ bool ret() {
     return true;
 }
 
-int main() {
-    // Board board;
-    // printBoard(board);
-    // int from []= {5, 0};
-    // int to []= {4, 1};
-    //
-    // std::vector<int[2]> pa = board.getPossibleActions(from);
-    //
-    // // for(int* p: pa) {
-    // //     // std::cout<<p<<std::endl;
-    // }
-
-}
 
 Board::Board() {
     for (int i=0; i<8; i++) {
@@ -48,7 +35,6 @@ Board::Board() {
                 else {
                     table[i][j] = blank;
                 }
-
             } else {
                 table[i][j] = blank;
             }
@@ -63,12 +49,14 @@ bool Board::rightTurn(const int& checker) {
 
 
 
-std::vector<int[2]> Board::getPossibleActions(const int from[]) {
+std::vector<std::array<int, 2>> Board::getPossibleActions(const std::array<int, 2> from) {
+    if(!rightTurn(table[from[0]][from[1]])) return std::vector<std::array<int, 2>>();
     Checker checker = static_cast<Checker>(table[from[0]][from[1]]);
-    std::vector<int[2]> captures = getPossibleCaptures(from, checker);
+    std::vector<std::array<int, 2>> captures = getPossibleCaptures(from.data(), checker);
     if(captures.size()>0) return captures;
+    if(pendingCaptures.size()>0) return std::vector<std::array<int, 2>>();
 
-    std::vector<int[2]> moves = getPossibleMoves(from, checker);
+    std::vector<std::array<int, 2>> moves = getPossibleMoves(from.data(), checker);
     return moves;
 }
 
@@ -76,64 +64,62 @@ bool isValid (const int& row, const int& col) {
     return row>=0 && row<8 && col>=0 && col<8;
 }
 
-std::vector<int[2]> Board::getPossibleMoves(const int from[], const Checker& checker) {
-    std::vector<int[2]> moves;
+std::vector<std::array<int, 2>> Board::getPossibleMoves(const int from[], const Checker& checker) {
+    std::vector<std::array<int, 2>> moves;
     const int& row = from[0];
     const int& col = from[1];
-
 
     switch (checker) {
         case blackman:
             if(isValid(row+1, col+1) and table[row+1][col+1] == blank) {
-                moves.push_back({row+1, col+1});
+                moves.push_back({{row+1, col+1}});
             }
             if(isValid(row+1, col-1) and table[row+1][col-1] == blank) {
-                moves.push_back({row+1, col-1});
+                moves.push_back({{row+1, col-1}});
             }
             break;
         case whiteman:
             if(isValid(row-1, col+1) and table[row-1][col+1] == blank) {
-                moves.push_back({row-1, col+1});
+                moves.push_back({{row-1, col+1}});
             }
             if(isValid(row-1, col-1) and table[row-1][col-1] == blank) {
-                moves.push_back({row-1, col-1});
+                moves.push_back({{row-1, col-1}});
             }
             break;
         case blackking:
         case whiteking:
             for (int i = 1; i < 8; ++i) {
                 if (isValid(row - i, col - i) && table[row - i][col - i] == blank) {
-                    moves.push_back({row - i, col - i});
+                    moves.push_back({{row - i, col - i}});
                 } else break;
             }
             for (int i = 1; i < 8; ++i) {
                 if (isValid(row - i, col + i) && table[row - i][col + i] == blank) {
-                    moves.push_back({row - i, col + i});
+                    moves.push_back({{row - i, col + i}});
                 } else break;
             }
             for (int i = 1; i < 8; ++i) {
                 if (isValid(row + i, col - i) && table[row + i][col - i] == blank) {
-                    moves.push_back({row + i, col - i});
+                    moves.push_back({{row + i, col - i}});
                 } else break;
             }
             for (int i = 1; i < 8; ++i) {
                 if (isValid(row + i, col + i) && table[row + i][col + i] == blank) {
-                    moves.push_back({row + i, col + i});
+                    moves.push_back({{row + i, col + i}});
                 } else break;
             }
             break;
+        default:
     }
     return moves;
 }
 
-std::vector<int[2]> Board::getPossibleCaptures(const int from[], const Checker& checker) {
-    std::vector<int[2]> captures;
+std::vector<std::array<int, 2>> Board::getPossibleCaptures(const int from[], const Checker& checker) {
+    std::vector<std::array<int, 2>> captures;
     const int &row = from[0];
     const int &col = from[1];
 
-
     int directions[][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
-
 
     switch (checker) {
         case blackman:
@@ -141,7 +127,7 @@ std::vector<int[2]> Board::getPossibleCaptures(const int from[], const Checker& 
             for(int i = 0; i<4; i++) {
                 //checking validity
                 int* dir = directions[i];
-                if (!isValid(row+dir[0], col+dir[1]) or !isValid(row+2*dir[0], col+2*dir[1])) {
+                if (!isValid(row+2*dir[0], col+2*dir[1])) {
                     break;
                 }
                 //checking all 4 positions for enemies
@@ -149,7 +135,7 @@ std::vector<int[2]> Board::getPossibleCaptures(const int from[], const Checker& 
                 if(enemy!=blank and enemy%2!=checker%2) {
                     //found enemy, check space behind them
                     if(table[row+2*dir[0]][col+2*dir[1]] == blank) {
-                        captures.push_back({row+2*dir[0], col+2*dir[1]});
+                        captures.push_back({{row+2*dir[0], col+2*dir[1]}});
                     }
                 }
             }
@@ -177,7 +163,7 @@ std::vector<int[2]> Board::getPossibleCaptures(const int from[], const Checker& 
                                         table[row+after*dir[0]][col+after*dir[1]] != blank
                                         ) break;
 
-                                    captures.push_back({row+after*dir[0], col+after*dir[1]});
+                                    captures.push_back({{row+after*dir[0], col+after*dir[1]}});
                                 }
                             }
                         }
@@ -185,16 +171,58 @@ std::vector<int[2]> Board::getPossibleCaptures(const int from[], const Checker& 
                     }
                 }
             }
+        default:
     }
     return captures;
 }
 
-bool Board::makeMove(const int from[], const int to[]) {
+bool Board::moveIsCapture(const std::array<int,2>& from, const std::array<int, 2>& to) {
+    if(abs(from[0]-to[0])==1) return false;
+    const int& checker = table[from[0]][from[1]];
+    int i = std::min(from[0], to[0]);
+    int j = std::min(from[1], to[1]);
+    if(checker<=2) {
+        table[i+1][j+1] = blank;
+        return true;
+    }
 
-    if(!rightTurn(table[from[0]][from[1]])) return false;
+    for(i++, j++; i<std::max(from[0], to[0]); i++, j++) {
+        if(table[i][j]!=blank) {
+            table[i][j] = blank;
+            return true;
+        }
+    }
 
+    return false;
 
-    return true;
+}
+
+int Board::makeMove(std::array<int, 2>& from, std::array<int, 2>& to){
+
+    table[to[0]][to[1]] = table[from[0]][from[1]];
+    table[from[0]][from[1]] = blank;
+    if(moveIsCapture(from, to)) {
+        std::cout<<"Capture\n";
+    }
+    queue++;
+
+    return evaluate();
+}
+
+State Board::evaluate() {
+    pendingCaptures.clear();
+    for(int i=0; i<8; i++) {
+        for(int j=0; j<8; j++) {
+            auto pos = {i, j};
+            auto caps = getPossibleCaptures(pos, table[i][j]);
+            // if(rightTurn(table[i][j])) {
+            //     if(getPossibleActions({{i,j}}).size()>=0){
+            //         return moved;
+            //     }
+            // }
+        }
+    }
+    return moved;
 }
 
 

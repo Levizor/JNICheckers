@@ -7,21 +7,97 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-/*
- * Class:     main_Main
- * Method:    getTable
- * Signature: ()[[I
- */
-JNIEXPORT jobjectArray JNICALL Java_main_Main_getTable
-  (JNIEnv *, jclass);
-
+#undef main_Main_FOCUS_TRAVERSABLE_UNKNOWN
+#define main_Main_FOCUS_TRAVERSABLE_UNKNOWN 0L
+#undef main_Main_FOCUS_TRAVERSABLE_DEFAULT
+#define main_Main_FOCUS_TRAVERSABLE_DEFAULT 1L
+#undef main_Main_FOCUS_TRAVERSABLE_SET
+#define main_Main_FOCUS_TRAVERSABLE_SET 2L
+#undef main_Main_TOP_ALIGNMENT
+#define main_Main_TOP_ALIGNMENT 0.0f
+#undef main_Main_CENTER_ALIGNMENT
+#define main_Main_CENTER_ALIGNMENT 0.5f
+#undef main_Main_BOTTOM_ALIGNMENT
+#define main_Main_BOTTOM_ALIGNMENT 1.0f
+#undef main_Main_LEFT_ALIGNMENT
+#define main_Main_LEFT_ALIGNMENT 0.0f
+#undef main_Main_RIGHT_ALIGNMENT
+#define main_Main_RIGHT_ALIGNMENT 1.0f
+#undef main_Main_serialVersionUID
+#define main_Main_serialVersionUID -7644114512714619750LL
+#undef main_Main_serialVersionUID
+#define main_Main_serialVersionUID 4613797578919906343LL
+#undef main_Main_INCLUDE_SELF
+#define main_Main_INCLUDE_SELF 1L
+#undef main_Main_SEARCH_HEAVYWEIGHTS
+#define main_Main_SEARCH_HEAVYWEIGHTS 1L
+#undef main_Main_OPENED
+#define main_Main_OPENED 1L
+#undef main_Main_serialVersionUID
+#define main_Main_serialVersionUID 4497834738069338734LL
+#undef main_Main_DEFAULT_CURSOR
+#define main_Main_DEFAULT_CURSOR 0L
+#undef main_Main_CROSSHAIR_CURSOR
+#define main_Main_CROSSHAIR_CURSOR 1L
+#undef main_Main_TEXT_CURSOR
+#define main_Main_TEXT_CURSOR 2L
+#undef main_Main_WAIT_CURSOR
+#define main_Main_WAIT_CURSOR 3L
+#undef main_Main_SW_RESIZE_CURSOR
+#define main_Main_SW_RESIZE_CURSOR 4L
+#undef main_Main_SE_RESIZE_CURSOR
+#define main_Main_SE_RESIZE_CURSOR 5L
+#undef main_Main_NW_RESIZE_CURSOR
+#define main_Main_NW_RESIZE_CURSOR 6L
+#undef main_Main_NE_RESIZE_CURSOR
+#define main_Main_NE_RESIZE_CURSOR 7L
+#undef main_Main_N_RESIZE_CURSOR
+#define main_Main_N_RESIZE_CURSOR 8L
+#undef main_Main_S_RESIZE_CURSOR
+#define main_Main_S_RESIZE_CURSOR 9L
+#undef main_Main_W_RESIZE_CURSOR
+#define main_Main_W_RESIZE_CURSOR 10L
+#undef main_Main_E_RESIZE_CURSOR
+#define main_Main_E_RESIZE_CURSOR 11L
+#undef main_Main_HAND_CURSOR
+#define main_Main_HAND_CURSOR 12L
+#undef main_Main_MOVE_CURSOR
+#define main_Main_MOVE_CURSOR 13L
+#undef main_Main_NORMAL
+#define main_Main_NORMAL 0L
+#undef main_Main_ICONIFIED
+#define main_Main_ICONIFIED 1L
+#undef main_Main_MAXIMIZED_HORIZ
+#define main_Main_MAXIMIZED_HORIZ 2L
+#undef main_Main_MAXIMIZED_VERT
+#define main_Main_MAXIMIZED_VERT 4L
+#undef main_Main_MAXIMIZED_BOTH
+#define main_Main_MAXIMIZED_BOTH 6L
+#undef main_Main_serialVersionUID
+#define main_Main_serialVersionUID 2673458971256075116LL
 /*
  * Class:     main_Main
  * Method:    makeMove
- * Signature: ([[I)Z
+ * Signature: ([I[I)I
  */
-JNIEXPORT jboolean JNICALL Java_main_Main_makeMove
-  (JNIEnv *, jclass, jobjectArray);
+JNIEXPORT jint JNICALL Java_main_Main_makeMove
+  (JNIEnv *, jclass, jintArray, jintArray);
+
+/*
+ * Class:     main_Main
+ * Method:    getTile
+ * Signature: ([I)I
+ */
+JNIEXPORT jint JNICALL Java_main_Main_getTile
+  (JNIEnv *, jclass, jintArray);
+
+/*
+ * Class:     main_Main
+ * Method:    getPossibleMoves
+ * Signature: ([I)[[I
+ */
+JNIEXPORT jobjectArray JNICALL Java_main_Main_getPossibleMoves
+  (JNIEnv *, jclass, jintArray);
 
 #ifdef __cplusplus
 }
