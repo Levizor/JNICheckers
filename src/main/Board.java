@@ -78,6 +78,7 @@ public class Board extends JPanel {
                 from.setSelected(false);
             }
             int[][] actions = Main.getPossibleMoves(tile.coordinates);
+            System.out.println(Arrays.deepToString(actions));
             if(actions.length==0){
                 tile.setSelected(false);
                 return;
