@@ -10,4 +10,5 @@ public class Palette {
     static final Color WHITE = new Color(0xd8dee9);
     static final Color KING = new Color(0xebcb8b);
     static final Color HIGHLIGHTED = new Color(0xa3be8c);
+    static final Color FOCUSED = new Color(0xebcb8b);
 }

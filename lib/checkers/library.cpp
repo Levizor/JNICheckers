@@ -9,13 +9,13 @@ Board board;
 
 JNIEXPORT JNICALL jint Java_main_Main_makeMove(JNIEnv * env, jclass, jintArray from, jintArray to) {
     int* a = env->GetIntArrayElements(from, 0);
-    std::array<int, 2> fromp = {a[0], a[1]};
+    std::array<int, 2> fromP = {a[0], a[1]};
 
     a = env->GetIntArrayElements(to, 0);
 
-    std::array<int, 2> top = {a[0], a[1]};
+    std::array<int, 2> toP = {a[0], a[1]};
 
-    jint result = board.makeMove(fromp, top);
+    jint result = board.makeMove(fromP, toP);
     return result;
 }
 
@@ -26,21 +26,23 @@ JNIEXPORT JNICALL jint Java_main_Main_getTile(JNIEnv * env, jclass, jintArray ar
 }
 
 
-jobjectArray convertToJObjectArray(JNIEnv* env, const std::vector<std::array<int, 2>>& vector) {
-    jclass intArrayClass = env->FindClass("[I"); // Class reference for jintArray
-    jobjectArray jobjectArray = env->NewObjectArray(vector.size(), intArrayClass, nullptr);
+jobjectArray convertToJObjectArray(JNIEnv* env, const std::set<std::array<int, 2>>& set) {
+    jclass intArrayClass = env->FindClass("[I");
+    jobjectArray jobjectArray = env->NewObjectArray(set.size(), intArrayClass, nullptr);
 
 
-    for (int i = 0; i < vector.size(); ++i) {
-        const std::array<int, 2>& arr = vector[i];
+    int counter = 0;
+    for (auto& i : set) {
+        const std::array<int, 2>& arr = i;
 
         jintArray jintArray = env->NewIntArray(2);
 
         env->SetIntArrayRegion(jintArray, 0, 2, arr.data());
 
-        env->SetObjectArrayElement(jobjectArray, i, jintArray);
+        env->SetObjectArrayElement(jobjectArray, counter, jintArray);
 
         env->DeleteLocalRef(jintArray);
+        counter++;
     }
 
     return jobjectArray;

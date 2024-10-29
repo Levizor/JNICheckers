@@ -6,17 +6,8 @@
 #include <array>
 #include <iostream>
 
+int directions[][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 //init checkers positions on the table
-
-void printBoard(Board board) {
-    for (int i=0; i<8; i++) {
-        for (int j=0; j<8; j++) {
-            std::cout<<"|"<<board.table[i][j]<<"|";
-        }
-        std::cout<<"\n";
-    }
-}
-
 Board::Board() {
     for (int i=0; i<8; i++) {
         for (int j=0; j<8; j++) {
@@ -37,86 +28,92 @@ Board::Board() {
     }
 }
 
+//checks whether row and col are in bounds of board table
+bool isValid (const int& row, const int& col) {
+    return row>=0 && row<8 && col>=0 && col<8;
+}
+
+//checkrs wether it's the right turn for some checker
 bool Board::rightTurn(const int& checker) {
     if(checker%2==queue%2 and checker!=blank) return true;
     return false;
 }
 
+//checks if move is capture
+bool Board::moveIsCapture(const std::array<int, 2>& to) {
+    return pendingCaptures.contains(to);
+}
 
 
-std::vector<std::array<int, 2>> Board::getPossibleActions(const std::array<int, 2> from) {
-    if(!rightTurn(table[from[0]][from[1]])) return std::vector<std::array<int, 2>>();
+Checker Board::getChecker(const std::array<int, 2> &from) {
+    return static_cast<Checker>(table[from[0]][from[1]]);
+}
+
+//returns either captures or moves for some checker on the position
+std::set<std::array<int, 2>> Board::getPossibleActions(const std::array<int, 2> from) {
+    if(!rightTurn(table[from[0]][from[1]])) return std::set<std::array<int, 2>>();
     Checker checker = static_cast<Checker>(table[from[0]][from[1]]);
-    std::vector<std::array<int, 2>> captures = getPossibleCaptures(from);
+    auto captures = getPossibleCaptures(from);
     if(captures.size()>0) return captures;
-    if(pendingCaptures.size()>0) return std::vector<std::array<int, 2>>();
+    if(pendingCaptures.size()>0) return std::set<std::array<int, 2>>();
 
-    std::vector<std::array<int, 2>> moves = getPossibleMoves(from);
+    auto moves = getPossibleMoves(from);
     return moves;
 }
 
-bool isValid (const int& row, const int& col) {
-    return row>=0 && row<8 && col>=0 && col<8;
+
+bool Board::isBlank(const int &r, const int &c) {
+    if(!isValid(r,c)) return false;
+    return table[r][c]==blank;
 }
 
-std::vector<std::array<int, 2>> Board::getPossibleMoves(const std::array<int, 2> &from) {
-    std::vector<std::array<int, 2>> moves;
+
+//returns all possible moves for checker on the position
+std::set<std::array<int, 2>> Board::getPossibleMoves(const std::array<int, 2> &from) {
+    std::set<std::array<int, 2>> moves;
     const int& row = from[0];
     const int& col = from[1];
     const int& checker = table[row][col];
 
+
     switch (checker) {
         case blackman:
-            if(isValid(row+1, col+1) and table[row+1][col+1] == blank) {
-                moves.push_back({{row+1, col+1}});
-            }
-            if(isValid(row+1, col-1) and table[row+1][col-1] == blank) {
-                moves.push_back({{row+1, col-1}});
-            }
-            break;
         case whiteman:
-            if(isValid(row-1, col+1) and table[row-1][col+1] == blank) {
-                moves.push_back({{row-1, col+1}});
-            }
-            if(isValid(row-1, col-1) and table[row-1][col-1] == blank) {
-                moves.push_back({{row-1, col-1}});
+            for(int i=0;i<4;i++) {
+                if(i>1 and checker==blackman){break;}
+                if(i<2 and checker==whiteman) {continue;}
+                const int r = row+directions[i][0];
+                const int c = col+directions[i][1];
+                if(isBlank(r, c)) {
+                    moves.insert(std::array<int, 2>{r,c});
+                }
             }
             break;
+
         case blackking:
         case whiteking:
-            for (int i = 1; i < 8; ++i) {
-                if (isValid(row - i, col - i) && table[row - i][col - i] == blank) {
-                    moves.push_back({{row - i, col - i}});
-                } else break;
-            }
-            for (int i = 1; i < 8; ++i) {
-                if (isValid(row - i, col + i) && table[row - i][col + i] == blank) {
-                    moves.push_back({{row - i, col + i}});
-                } else break;
-            }
-            for (int i = 1; i < 8; ++i) {
-                if (isValid(row + i, col - i) && table[row + i][col - i] == blank) {
-                    moves.push_back({{row + i, col - i}});
-                } else break;
-            }
-            for (int i = 1; i < 8; ++i) {
-                if (isValid(row + i, col + i) && table[row + i][col + i] == blank) {
-                    moves.push_back({{row + i, col + i}});
-                } else break;
+            for(int i=0;i<4;i++) {
+                int* dir = directions[i];
+                for(int j=1;j<6; j++) {
+                    const int r = row+j*directions[i][0];
+                    const int c = col+j*directions[i][1];
+
+                    if(!isBlank(r, c)) break;
+                    moves.insert(std::array<int, 2>{r,c});
+                }
             }
             break;
-        default:
     }
     return moves;
 }
 
-std::vector<std::array<int, 2>> Board::getPossibleCaptures(const std::array<int, 2> from) {
-    std::vector<std::array<int, 2>> captures;
+//returns all possible captures for checker on the position
+std::set<std::array<int, 2>> Board::getPossibleCaptures(const std::array<int, 2> from) {
+    auto captures = std::set<std::array<int, 2>>();;
     const int &row = from[0];
     const int &col = from[1];
     const int &checker = table[row][col];
 
-    int directions[][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
     switch (checker) {
         case blackman:
@@ -132,7 +129,7 @@ std::vector<std::array<int, 2>> Board::getPossibleCaptures(const std::array<int,
                 if(enemy!=blank and enemy%2!=checker%2) {
                     //found enemy, check space behind them
                     if(table[row+2*dir[0]][col+2*dir[1]] == blank) {
-                        captures.push_back({{row+2*dir[0], col+2*dir[1]}});
+                        captures.insert({{row+2*dir[0], col+2*dir[1]}});
                     }
                 }
             }
@@ -150,26 +147,24 @@ std::vector<std::array<int, 2>> Board::getPossibleCaptures(const std::array<int,
                     if (!isValid(r, c)) {
                         break;
                     }
-                    std::cout<<"Valid: "<<r<<" "<<c<<std::endl;
                     int enemy = table[r][c];
                     if(enemy==blank) {
-                        if(found) captures.push_back({{r, c}});
+                        if(found) captures.insert({{r, c}});
                         continue;
                     };
                     if(enemy%2==checker%2) break;
                     //found enemy
                     if(found) {
-                        std::cout<<"enemy was already found, breaking the loop\n";
                         break;
                     };
                     found = true;
-                    std::cout<<std::endl;
                 }
             }
     }
     return captures;
 }
 
+//removes captured piece between two coordinates
 void Board::capture(std::array<int, 2> &from, std::array<int, 2> &to) {
     movesWithoutCaptures=0;
     int s = abs(from[0]-to[0]);
@@ -181,12 +176,11 @@ void Board::capture(std::array<int, 2> &from, std::array<int, 2> &to) {
     }
 }
 
-
-bool Board::moveIsCapture(const std::array<int, 2>& to) {
-    return pendingCaptures.contains(to);
-}
-
+//processes move
 int Board::makeMove(std::array<int, 2>& from, std::array<int, 2>& to){
+    if(!getPossibleActions(from).contains(to)) {
+        return wrong;
+    }
 
     auto checker = getChecker(from);
     if(to[0]==7 or to[0]==0) {
@@ -204,9 +198,7 @@ int Board::makeMove(std::array<int, 2>& from, std::array<int, 2>& to){
         }
     }
     else movesWithoutCaptures++;
-
     queue++;
-
     updatePendingCaptures();
     return getState();
 }
@@ -223,6 +215,7 @@ void Board::updatePendingCaptures() {
     }
 }
 
+//returns the state of the game,eg win tie or just move
 State Board::getState() {
     if(movesWithoutCaptures>40) return tie;
 
@@ -259,9 +252,4 @@ State Board::getState() {
     return tie;
 }
 
-
-
-Checker Board::getChecker(const std::array<int, 2> &from) {
-    return static_cast<Checker>(table[from[0]][from[1]]);
-}
 

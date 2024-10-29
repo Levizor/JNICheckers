@@ -1,9 +1,15 @@
 package main;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Board extends JPanel {
@@ -27,6 +33,28 @@ public class Board extends JPanel {
         }
     }
 
+    public void playSound(StateType state){
+        String filePath = switch (state) {
+            case WrongMove -> "wrong.wav";
+            case Moved -> "moved.wav";
+            case Blackwon -> "win.wav";
+            case Whitewon -> "win.wav";
+            case Tie -> "win.vav";
+        };
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try (AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(filePath))) {
+                    Clip clip = AudioSystem.getClip();
+                    clip.open(audioStream);
+                    clip.start();
+                    clip.drain();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+    }
     public void update(){
         for(int i=0; i<8; i++){
             for (int j=0; j<8; j++){
@@ -36,13 +64,15 @@ public class Board extends JPanel {
         }
 
         if(state==null) return;
+        playSound(state);
 
-        String winner;
+        String winner = "";
         switch(state){
+            case WrongMove ->{return;}
             case Moved -> {return;}
             case Blackwon -> winner = "Black";
             case Whitewon -> winner = "White";
-            default -> winner = "Friendship";
+            case Tie-> winner = "Friendship";
         }
         state = null;
 
@@ -78,25 +108,20 @@ public class Board extends JPanel {
                 from.setSelected(false);
                 dehighlightAll();
                 from=null;
-                posActs=null;
                 return;
             }
             if(from!=null){
                 if(!oneTeamPieceSelected(from.coordinates, tile.coordinates)){
                     tile.setSelected(false);
                     from.setSelected(false);
-                    if (Arrays.stream(posActs).anyMatch(c1 -> Arrays.equals(c1, tile.coordinates))) {
-                        state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
-                        update();
-                    }
+                    state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
+                    update();
                     from = null;
-                    posActs = null;
                     return;
                 }
                 from.setSelected(false);
             }
             int[][] actions = Main.getPossibleMoves(tile.coordinates);
-//            System.out.println(Arrays.deepToString(actions));
             if(actions.length==0){
                 tile.setSelected(false);
                 return;

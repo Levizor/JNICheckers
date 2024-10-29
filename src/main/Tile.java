@@ -2,11 +2,16 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.Arrays;
 
 public class Tile extends JToggleButton {
     private CheckerType checker;
     boolean highlited = false;
+    boolean focused = false;
     int[] coordinates;
 
 
@@ -39,11 +44,10 @@ public class Tile extends JToggleButton {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         Color color;
-        if (highlited) {
-            color = Palette.HIGHLIGHTED;
-        }else {
-            color = (coordinates[0]+coordinates[1])%2 == 0 ? Palette.LIGHT_TILE : Palette.DARK_TILE;
-        }
+        if (highlited) color = Palette.HIGHLIGHTED;
+        else if(focused) color = Palette.FOCUSED;
+        else color = (coordinates[0]+coordinates[1])%2 == 0 ? Palette.LIGHT_TILE : Palette.DARK_TILE;
+
         g2d.setColor(color);
         g2d.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
 
@@ -101,5 +105,9 @@ public class Tile extends JToggleButton {
     @Override
     public String toString() {
         return Arrays.toString(coordinates);
+    }
+
+    public void mouseEntered(MouseEvent e) {
+
     }
 }

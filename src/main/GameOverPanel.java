@@ -11,14 +11,15 @@ public class GameOverPanel extends JPanel {
        JLabel winnerLabel = new JLabel(winner + " won!", SwingConstants.CENTER);
        winnerLabel.setForeground(Palette.KING);
        winnerLabel.setFont(new Font("Arial", Font.BOLD, 32));
-       add(winnerLabel, BorderLayout.NORTH);
+       add(winnerLabel, BorderLayout.CENTER);
 
        JPanel buttonPanel = new JPanel(new FlowLayout());
+       buttonPanel.setBackground(Palette.DARK_TILE);
        StyledButton restart = new StyledButton("Restart");
        StyledButton exit = new StyledButton("Exit");
        buttonPanel.add(restart);
        buttonPanel.add(exit);
-       add(buttonPanel, BorderLayout.CENTER);
+       add(buttonPanel, BorderLayout.SOUTH);
 
        restart.addActionListener(e -> {
            Main.frame.remove(this);
