@@ -26,26 +26,6 @@ JNIEXPORT JNICALL jint Java_main_Main_getTile(JNIEnv * env, jclass, jintArray ar
 }
 
 
-/*
-JNIEXPORT JNICALL jobjectArray Java_main_Main_getTable(JNIEnv * env, jclass) {
-    auto &table = board.table;
-    jclass intArrayClass = env->FindClass("[I");
-    jobjectArray resultArray = env->NewObjectArray(8, intArrayClass, nullptr);
-
-    for (int i = 0; i < 8; ++i) {
-        jintArray intArray = env->NewIntArray(8);
-
-        env->SetIntArrayRegion(intArray, 0, 8, table[i]);
-        env->SetObjectArrayElement(resultArray, i, intArray);
-        env->SetObjectArrayElement(resultArray, i, intArray);
-
-        env->DeleteLocalRef(intArray);
-    }
-
-    return resultArray;
-
-}
-*/
 jobjectArray convertToJObjectArray(JNIEnv* env, const std::vector<std::array<int, 2>>& vector) {
     jclass intArrayClass = env->FindClass("[I"); // Class reference for jintArray
     jobjectArray jobjectArray = env->NewObjectArray(vector.size(), intArrayClass, nullptr);
@@ -70,4 +50,8 @@ JNIEXPORT jobjectArray JNICALL Java_main_Main_getPossibleMoves
     int* arr = env->GetIntArrayElements(from, NULL);
     std::array<int, 2> arr2 = {arr[0], arr[1]};
     return convertToJObjectArray(env, board.getPossibleActions(arr2));
+}
+JNIEXPORT void JNICALL Java_main_Main_restartGame
+  (JNIEnv *, jclass) {
+    board = Board();
 }

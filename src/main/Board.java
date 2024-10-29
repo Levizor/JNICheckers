@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 public class Board extends JPanel {
     Tile[][] tiles;
+    StateType state;
 
     public Board(){
         super(new GridLayout(8, 8));
@@ -33,6 +34,23 @@ public class Board extends JPanel {
                 button.setChecker(Main.getTile(button.coordinates));
             }
         }
+
+        if(state==null) return;
+
+        String winner;
+        switch(state){
+            case Moved -> {return;}
+            case Blackwon -> winner = "Black";
+            case Whitewon -> winner = "White";
+            default -> winner = "Friendship";
+        }
+        state = null;
+
+
+        Main.frame.add(new GameOverPanel(winner));
+        Main.frame.remove(Main.board);
+        Main.frame.revalidate();
+        Main.frame.repaint();
     }
 
     public void highlight(int[][] coords){
@@ -68,7 +86,7 @@ public class Board extends JPanel {
                     tile.setSelected(false);
                     from.setSelected(false);
                     if (Arrays.stream(posActs).anyMatch(c1 -> Arrays.equals(c1, tile.coordinates))) {
-                        int i = Main.makeMove(from.coordinates, tile.coordinates);
+                        state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
                         update();
                     }
                     from = null;
@@ -78,7 +96,7 @@ public class Board extends JPanel {
                 from.setSelected(false);
             }
             int[][] actions = Main.getPossibleMoves(tile.coordinates);
-            System.out.println(Arrays.deepToString(actions));
+//            System.out.println(Arrays.deepToString(actions));
             if(actions.length==0){
                 tile.setSelected(false);
                 return;

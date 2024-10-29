@@ -16,51 +16,37 @@ public class Main extends JFrame {
 
     public static native int[][] getPossibleMoves(int[] coordinates);
 
+    public static native void restartGame();
+
     public static Board board = new Board();
 
-    public Main(){
-        System.out.println("Opening window");
-        setLocation(460, 40);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    public static JFrame frame = new JFrame();
 
-        add(board);
-        setPreferredSize(new Dimension(1000, 1000));
-        pack();
-        setVisible(true);
-        addComponentListener(new ComponentAdapter() {
+    public static void restart(){
+        restartGame();
+        board.update();
+        frame.add(board);
+        frame.repaint();
+        frame.revalidate();
+    }
+
+    public static void init(){
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        frame.add(board);
+        frame.setPreferredSize(new Dimension(1000, 1000));
+        frame.pack();
+        frame.setVisible(true);
+        frame.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                // Get the current size of the window
-                int newSize = Math.min(getWidth(), getHeight());
-                setSize(newSize, newSize);  // Set both width and height to newSize
+                int newSize = Math.min(frame.getWidth(), frame.getHeight());
+                frame.setSize(newSize, newSize);
             }
         });
     }
 
-    static int[][] getMove(){
-        int[][] arr ={{5,0}, {4,1}};
-        return arr;
-    }
-
-    static boolean moved(){return true;};
-
     public static void main(String[] args) {
-
-        //initialization code
-        Main main = new Main();
-
-/*
-        while(true){
-            if (moved()){
-                int [][] move = getMove();
-                if(makeMove(move)){
-                    printTable();
-                }else {
-                    System.out.println("Not up to the rules");
-                    System.exit(-1);
-                }
-            }
-        }
-*/
+        init();
     }
 }

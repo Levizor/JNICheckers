@@ -2,10 +2,9 @@ package main;
 
 public enum StateType {
     Moved(0),
-    Captured(1),
-    Blackwon(2),
-    Whitewon(3),
-    Tie(4);
+    Blackwon(1),
+    Whitewon(2),
+    Tie(3);
     public  final  int order;
 
     StateType(int i){

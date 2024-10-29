@@ -72,7 +72,30 @@ public class Tile extends JToggleButton {
 
         if(checker==CheckerType.Blackking || checker==CheckerType.Whiteking) {
             g2d.setColor(Palette.KING);
-            g2d.drawString("K", x + d / 3, y + (2 * d) / 3);
+            drawCrown(g2d, x, y, d);
+        }
+    }
+
+    private void drawCrown(Graphics2D g2d, int x, int y, int d) {
+        g2d.setColor(Palette.KING); 
+        int crownBaseY = y + (int)(0.6 * d);
+        int[] xbase = {x + (int)(0.2 * d), x + (int)(0.8 * d), x + (int)(0.7 * d), x + (int)(0.3 * d)};
+        int[] ybase = {crownBaseY, crownBaseY, crownBaseY + (int)(0.1 * d), crownBaseY + (int)(0.1 * d)};
+        g2d.fillPolygon(xbase, ybase, xbase.length);
+
+        int[][] xspikes = {
+            {x + (int)(0.20 * d), x + (int)(0.35 * d), x + (int)(0.45 * d)},
+            {x + (int)(0.40 * d), x + (int)(0.5 * d), x + (int)(0.6 * d)},
+            {x + (int)(0.55 * d), x + (int)(0.65 * d), x + (int)(0.8 * d)}
+        };
+        int[][] yspikes = {
+            {crownBaseY, y + (int)(0.3 * d), crownBaseY},
+            {crownBaseY, y + (int)(0.2 * d), crownBaseY},
+            {crownBaseY, y + (int)(0.3 * d), crownBaseY}
+        };
+
+        for (int i = 0; i < xspikes.length; i++) {
+            g2d.fillPolygon(xspikes[i], yspikes[i], xspikes[i].length);
         }
     }
     @Override

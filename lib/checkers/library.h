@@ -99,6 +99,14 @@ JNIEXPORT jint JNICALL Java_main_Main_getTile
 JNIEXPORT jobjectArray JNICALL Java_main_Main_getPossibleMoves
   (JNIEnv *, jclass, jintArray);
 
+/*
+ * Class:     main_Main
+ * Method:    restartGame
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_main_Main_restartGame
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

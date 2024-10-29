@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b814df-2054-41eb-85de-359e335ebb47" name="Changes" comment="" />
+    <list default="true" id="25b814df-2054-41eb-85de-359e335ebb47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/GameOverPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/Board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/Board.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/Board.cpp.o.ddi.d" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/Board.cpp.o.ddi.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/library.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/library.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/library.cpp.o.ddi.d" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/CMakeFiles/checkers.dir/library.cpp.o.ddi.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/libcheckers.so" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/cmake-build-debug/libcheckers.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/library.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/library.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checkers/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/checkers/library.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$TileListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$TileListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/StateType.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/StateType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/StateType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tile.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/levizor/Projects/JNICheckers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/levizor/t.java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,7 +113,10 @@
       <workItem from="1729949909856" duration="17363000" />
       <workItem from="1730049667178" duration="3301000" />
       <workItem from="1730099882366" duration="357000" />
-      <workItem from="1730106505639" duration="623000" />
+      <workItem from="1730106505639" duration="752000" />
+      <workItem from="1730107965919" duration="1328000" />
+      <workItem from="1730115407002" duration="21788000" />
+      <workItem from="1730195727361" duration="983000" />
     </task>
     <servers />
   </component>

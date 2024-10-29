@@ -17,11 +17,6 @@ void printBoard(Board board) {
     }
 }
 
-bool ret() {
-    return true;
-}
-
-
 Board::Board() {
     for (int i=0; i<8; i++) {
         for (int j=0; j<8; j++) {
@@ -52,11 +47,11 @@ bool Board::rightTurn(const int& checker) {
 std::vector<std::array<int, 2>> Board::getPossibleActions(const std::array<int, 2> from) {
     if(!rightTurn(table[from[0]][from[1]])) return std::vector<std::array<int, 2>>();
     Checker checker = static_cast<Checker>(table[from[0]][from[1]]);
-    std::vector<std::array<int, 2>> captures = getPossibleCaptures(from.data(), checker);
+    std::vector<std::array<int, 2>> captures = getPossibleCaptures(from);
     if(captures.size()>0) return captures;
     if(pendingCaptures.size()>0) return std::vector<std::array<int, 2>>();
 
-    std::vector<std::array<int, 2>> moves = getPossibleMoves(from.data(), checker);
+    std::vector<std::array<int, 2>> moves = getPossibleMoves(from);
     return moves;
 }
 
@@ -64,10 +59,11 @@ bool isValid (const int& row, const int& col) {
     return row>=0 && row<8 && col>=0 && col<8;
 }
 
-std::vector<std::array<int, 2>> Board::getPossibleMoves(const int from[], const Checker& checker) {
+std::vector<std::array<int, 2>> Board::getPossibleMoves(const std::array<int, 2> &from) {
     std::vector<std::array<int, 2>> moves;
     const int& row = from[0];
     const int& col = from[1];
+    const int& checker = table[row][col];
 
     switch (checker) {
         case blackman:
@@ -114,10 +110,11 @@ std::vector<std::array<int, 2>> Board::getPossibleMoves(const int from[], const 
     return moves;
 }
 
-std::vector<std::array<int, 2>> Board::getPossibleCaptures(const int from[], const Checker& checker) {
+std::vector<std::array<int, 2>> Board::getPossibleCaptures(const std::array<int, 2> from) {
     std::vector<std::array<int, 2>> captures;
     const int &row = from[0];
     const int &col = from[1];
+    const int &checker = table[row][col];
 
     int directions[][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
@@ -128,7 +125,7 @@ std::vector<std::array<int, 2>> Board::getPossibleCaptures(const int from[], con
                 //checking validity
                 int* dir = directions[i];
                 if (!isValid(row+2*dir[0], col+2*dir[1])) {
-                    break;
+                    continue;
                 }
                 //checking all 4 positions for enemies
                 int enemy = table[row+dir[0]][col+dir[1]];
@@ -139,90 +136,132 @@ std::vector<std::array<int, 2>> Board::getPossibleCaptures(const int from[], con
                     }
                 }
             }
-
+            break;
         case blackking:
         case whiteking:
+            //checking all 4 direction for enemies
             for(int j = 0; j<4; j++) {
                 int* dir = directions[j];
-                for(int i=1; i<8; i++) {
-
+                bool found = false;
+                for(int i=1; i<7; i++) {
+                    const int r = row+i*dir[0];
+                    const int c = col+i*dir[1];
                     //checking validity
-                    if (!isValid(row+i*dir[0], col+i*dir[1]) or !isValid(row+(i+1)*dir[0], col+(i+1)*dir[1])) {
+                    if (!isValid(r, c)) {
                         break;
                     }
-                    //checking all 4 positions for enemies
-                    int enemy = table[row+i*dir[0]][col+i*dir[1]];
-                    if(enemy!=blank ) {
-                        if(enemy%2!=checker%2) {
-                            //found enemy, check space behind them
-                            if(table[row+(i+1)*dir[0]][col+(i+1)*dir[1]] == blank) {
-                                for (int after=1; after<8; after++) {
-                                    if(
-                                        !isValid(row+after*dir[0], col+after*dir[1])
-                                        or
-                                        table[row+after*dir[0]][col+after*dir[1]] != blank
-                                        ) break;
-
-                                    captures.push_back({{row+after*dir[0], col+after*dir[1]}});
-                                }
-                            }
-                        }
+                    std::cout<<"Valid: "<<r<<" "<<c<<std::endl;
+                    int enemy = table[r][c];
+                    if(enemy==blank) {
+                        if(found) captures.push_back({{r, c}});
+                        continue;
+                    };
+                    if(enemy%2==checker%2) break;
+                    //found enemy
+                    if(found) {
+                        std::cout<<"enemy was already found, breaking the loop\n";
                         break;
-                    }
+                    };
+                    found = true;
+                    std::cout<<std::endl;
                 }
             }
-        default:
     }
     return captures;
 }
 
-bool Board::moveIsCapture(const std::array<int,2>& from, const std::array<int, 2>& to) {
-    if(abs(from[0]-to[0])==1) return false;
-    const int& checker = table[from[0]][from[1]];
-    int i = std::min(from[0], to[0]);
-    int j = std::min(from[1], to[1]);
-    if(checker<=2) {
-        table[i+1][j+1] = blank;
-        return true;
+void Board::capture(std::array<int, 2> &from, std::array<int, 2> &to) {
+    movesWithoutCaptures=0;
+    int s = abs(from[0]-to[0]);
+    int r = (from[0]>to[0])? -1: 1;
+    int c = (from[1]>to[1])? -1: 1;
+
+    for(int i = 0; i<s; i++) {
+        table[from[0]+r*i][from[1]+c*i] = blank;
     }
+}
 
-    for(i++, j++; i<std::max(from[0], to[0]); i++, j++) {
-        if(table[i][j]!=blank) {
-            table[i][j] = blank;
-            return true;
-        }
-    }
 
-    return false;
-
+bool Board::moveIsCapture(const std::array<int, 2>& to) {
+    return pendingCaptures.contains(to);
 }
 
 int Board::makeMove(std::array<int, 2>& from, std::array<int, 2>& to){
 
-    table[to[0]][to[1]] = table[from[0]][from[1]];
-    table[from[0]][from[1]] = blank;
-    if(moveIsCapture(from, to)) {
-        std::cout<<"Capture\n";
+    auto checker = getChecker(from);
+    if(to[0]==7 or to[0]==0) {
+        if(to[0]%2==checker%2 and checker<=2) {
+            checker=Checker(checker+2);
+        }
     }
+    table[to[0]][to[1]] = checker;
+    table[from[0]][from[1]] = blank;
+    if(moveIsCapture(to)) {
+        capture(from, to);
+        if(getPossibleCaptures(to).size()>0) {
+            updatePendingCaptures();
+            return getState();
+        }
+    }
+    else movesWithoutCaptures++;
+
     queue++;
 
-    return evaluate();
+    updatePendingCaptures();
+    return getState();
 }
 
-State Board::evaluate() {
+void Board::updatePendingCaptures() {
     pendingCaptures.clear();
     for(int i=0; i<8; i++) {
         for(int j=0; j<8; j++) {
-            auto pos = {i, j};
-            auto caps = getPossibleCaptures(pos, table[i][j]);
-            // if(rightTurn(table[i][j])) {
-            //     if(getPossibleActions({{i,j}}).size()>=0){
-            //         return moved;
-            //     }
-            // }
+            if(table[i][j]==blank or table[i][j]%2!=queue%2) continue;
+            std::array<int, 2> from = {i, j};
+            auto f = getPossibleCaptures(from);
+            pendingCaptures.insert(f.begin(), f.end());
         }
     }
-    return moved;
 }
 
+State Board::getState() {
+    if(movesWithoutCaptures>40) return tie;
+
+    auto exist = [this](int c) {
+        for(int i = 0; i<8; i++) {
+            for(int j = 0; j<8; j++) {
+                if(table[i][j]%2==c%2 and table[i][j]!=blank) return true;
+            }
+        }
+        return false;
+    };
+
+    auto canMove = [this]() {
+        for(int i = 0; i<8; i++) {
+            for(int j = 0; j<8; j++) {
+                if(table[i][j]%2==queue%2 and table[i][j]!=blank) {
+                    std::array<int, 2> from = {i, j};
+                    if(getPossibleActions(from).size()>0) return moved;
+                }
+            }
+        }
+        return static_cast<State>(queue % 2 + 1);
+    };
+
+    bool black = exist(blackman);
+    bool white = exist(whiteman);
+
+    if(black and white) return canMove();
+
+    if(black) return blackwon;
+    if(white) return whitewon;
+
+    //imposible but who knows?
+    return tie;
+}
+
+
+
+Checker Board::getChecker(const std::array<int, 2> &from) {
+    return static_cast<Checker>(table[from[0]][from[1]]);
+}
 

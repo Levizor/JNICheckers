@@ -1,7 +1,7 @@
 CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /home/levizor/Projects/JNICheckers/lib/checkers/Board.cpp \
   /home/levizor/Projects/JNICheckers/lib/checkers/Board.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/vector \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/set \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/requires_hosted.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
@@ -16,6 +16,7 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/n15bxkd7id2gvlwpihm4kp675aqkrwmj-glibc-2.40-36-dev/include/gnu/stubs-64.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/pstl/pstl_config.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_tree.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_algobase.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/functexcept.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/exception_defines.h \
@@ -46,20 +47,17 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/x86_64-unknown-linux-gnu/bits/c++allocator.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/new_allocator.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/memoryfwd.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_uninitialized.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/ext/alloc_traits.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/alloc_traits.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_vector.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/initializer_list \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_bvector.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/functional_hash.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/hash_bytes.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/refwrap.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/invoke.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_function.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/backward/binders.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/ext/alloc_traits.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/alloc_traits.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/ext/aligned_buffer.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/node_handle.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_set.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/initializer_list \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_multiset.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/range_access.h \
-  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/vector.tcc \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/erase_if.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/memory_resource.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/cstddef \
   /nix/store/qb1x0mipbcvnkr40xwiwp24gg8lffrc0-clang-wrapper-18.1.8/resource-root/include/stddef.h \
@@ -73,10 +71,19 @@ CMakeFiles/checkers.dir/Board.cpp.o.ddi: \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/uses_allocator.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/uses_allocator_args.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/tuple \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/invoke.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/ranges_util.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/ranges_base.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/max_size_type.h \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/numbers \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/vector \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_uninitialized.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_vector.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/stl_bvector.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/functional_hash.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/hash_bytes.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/refwrap.h \
+  /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/bits/vector.tcc \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/array \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/iostream \
   /nix/store/0vsyw5bhwmisszyfd1a0sdnwvnf4qa5a-gcc-13.3.0/include/c++/13.3.0/ostream \
