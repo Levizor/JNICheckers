@@ -8,17 +8,29 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.Arrays;
 
-public class Tile extends JToggleButton {
+public class Tile extends JButton{
     private CheckerType checker;
     boolean highlited = false;
     boolean focused = false;
+    boolean selected = false;
+
     int[] coordinates;
 
 
+    @Override
+    public boolean isSelected() {
+        return selected;
+    }
+
+    @Override
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
 
     public Tile(int x, int y) {
         super();
         coordinates = new int[]{x, y};
+        setBorderPainted(false);
     }
 
     public void setChecker(CheckerType checker) {
@@ -33,8 +45,8 @@ public class Tile extends JToggleButton {
         this.highlited = highlited;
     }
 
-    public CheckerType getChecker() {
-        return checker;
+    public void setFocused(boolean focused) {
+        this.focused = focused;
     }
 
     @Override
@@ -45,15 +57,20 @@ public class Tile extends JToggleButton {
 
         Color color;
         if (highlited) color = Palette.HIGHLIGHTED;
-        else if(focused) color = Palette.FOCUSED;
         else color = (coordinates[0]+coordinates[1])%2 == 0 ? Palette.LIGHT_TILE : Palette.DARK_TILE;
 
         g2d.setColor(color);
-        g2d.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
+        g2d.fillRect(0, 0, getWidth(), getHeight());
+
+        if(focused){
+            g2d.setColor(Palette.FOCUSED);
+            g2d.setStroke(new BasicStroke(12));
+            g2d.drawRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
+        }
 
         if(isSelected()) {
             g2d.setColor(Palette.SELECTED);
-            g2d.fillRoundRect(2, 2, getWidth() - 4, getHeight() - 4, 8, 8);
+            g2d.fillRect(2, 2, getWidth() - 4, getHeight() - 4);
         }
 
         drawChecker(g2d);
@@ -107,7 +124,4 @@ public class Tile extends JToggleButton {
         return Arrays.toString(coordinates);
     }
 
-    public void mouseEntered(MouseEvent e) {
-
-    }
 }
