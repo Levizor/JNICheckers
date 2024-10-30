@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b814df-2054-41eb-85de-359e335ebb47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tests/Initialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/KingChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/ManChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Victory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JNICheckers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JNICheckers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moved.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$BoardKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$BoardKeyListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$TileListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$TileListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Palette.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Palette.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/StateType.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/StateType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Palette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Palette.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/StateType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrong.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +130,7 @@
       <workItem from="1730293027628" duration="557000" />
       <workItem from="1730306198735" duration="765000" />
       <workItem from="1730307207889" duration="7536000" />
-      <workItem from="1730314868330" duration="7969000" />
+      <workItem from="1730314868330" duration="8208000" />
     </task>
     <servers />
   </component>

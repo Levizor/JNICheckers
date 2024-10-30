@@ -145,7 +145,6 @@ public class Board extends JPanel {
         if (!oneTeamPieceSelected(from.coordinates, tile.coordinates)) {
             tile.setSelected(false);
             state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
-            System.out.println("Main.makeMove(new int[]{%d, %d}, new int[]{%d, %d});".formatted(from.coordinates[0], from.coordinates[1], tile.coordinates[0], tile.coordinates[1]));
             update();
         }
         from.setSelected(false);
