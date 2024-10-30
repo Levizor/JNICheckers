@@ -5,17 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b814df-2054-41eb-85de-359e335ebb47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tests/Initialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/KingChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/ManChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/Victory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JNICheckers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JNICheckers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moved.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$BoardKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$BoardKeyListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board$TileListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board$TileListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/GameOverPanel$StyledButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/GameOverPanel$StyledButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/GameOverPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/GameOverPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Palette.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Palette.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/StateType.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/StateType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/JNICheckers/main/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/JNICheckers/main/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameOverPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameOverPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Palette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Palette.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/StateType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrong.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,29 +56,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Checker.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/levizor/t.java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Checker.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CorrectMoves.CheckerCantMoveAnywhereExceptPossibleMoves.executor": "Run",
+    "JUnit.Initialization.CheckerPositionInitializedCorrectly.executor": "Run",
+    "JUnit.ManChecker.ManCanCaptureAllSides.executor": "Profiler#1",
+    "JUnit.Test.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/levizor/Projects/JNICheckers/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="JNICheckers" />
@@ -75,12 +100,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="JUnit" factoryName="JUnit">
+      <module name="JNICheckers" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Victory" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -Djava.library.path=lib/checkers/cmake-build-debug" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.Test" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +147,11 @@
       <workItem from="1730209411305" duration="21339000" />
       <workItem from="1730270242320" duration="3481000" />
       <workItem from="1730284986126" duration="742000" />
+      <workItem from="1730285970962" duration="597000" />
+      <workItem from="1730293027628" duration="557000" />
+      <workItem from="1730306198735" duration="765000" />
+      <workItem from="1730307207889" duration="7536000" />
+      <workItem from="1730314868330" duration="7969000" />
     </task>
     <servers />
   </component>

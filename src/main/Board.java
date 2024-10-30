@@ -59,7 +59,7 @@ public class Board extends JPanel {
                     @Override
                     public void run() {
 
-                        try (AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(filePath))) {
+                        try (AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("src/resources/" + filePath))) {
                             Clip clip = AudioSystem.getClip();
                             clip.open(audioStream);
                             clip.start();
@@ -126,6 +126,7 @@ public class Board extends JPanel {
     public void selectTile(Tile tile) {
         dehighlightAll();
         if (from == null) {
+            //it is stored ONLY to allow keyboard to iterate only over possible moves
             highlighted = new ArrayList<>(Arrays.asList(Main.getPossibleMoves(tile.coordinates)));
             if (highlighted.size() == 0) {
                 return;
@@ -141,14 +142,15 @@ public class Board extends JPanel {
             from = null;
             return;
         }
-        tile.setSelected(true);
         if (!oneTeamPieceSelected(from.coordinates, tile.coordinates)) {
             tile.setSelected(false);
             state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
+            System.out.println("Main.makeMove(new int[]{%d, %d}, new int[]{%d, %d});".formatted(from.coordinates[0], from.coordinates[1], tile.coordinates[0], tile.coordinates[1]));
             update();
         }
         from.setSelected(false);
         from = null;
+        selectTile(tile);
     }
 
     boolean oneTeamPieceSelected(int[] from, int[] to) {
@@ -179,11 +181,11 @@ public class Board extends JPanel {
         @Override
         public void keyPressed(KeyEvent e) {
             int direction = switch (e.getKeyCode()) {
-                case KeyEvent.VK_UP -> 1;
-                case KeyEvent.VK_DOWN -> 2;
-                case KeyEvent.VK_LEFT -> 3;
-                case KeyEvent.VK_RIGHT -> 4;
-                case KeyEvent.VK_ENTER -> 0;
+                case KeyEvent.VK_UP, KeyEvent.VK_K -> 1;
+                case KeyEvent.VK_DOWN, KeyEvent.VK_J -> 2;
+                case KeyEvent.VK_LEFT, KeyEvent.VK_H -> 3;
+                case KeyEvent.VK_RIGHT, KeyEvent.VK_L -> 4;
+                case KeyEvent.VK_ENTER, KeyEvent.VK_SPACE -> 0;
                 case KeyEvent.VK_ESCAPE -> 5;
                 default -> -1;
             };
@@ -191,8 +193,9 @@ public class Board extends JPanel {
                 selectTile(tiles[focusedRow][focusedCol]);
                 return;
             }
-            if(direction == 5){
+            if (direction == 5) {
                 tiles[focusedRow][focusedCol].setFocused(false);
+                if (highlighted.isEmpty()) return;
                 int[] coords = highlighted.getLast();
                 selectTile(tiles[coords[0]][coords[1]]);
                 focusedRow = coords[0];

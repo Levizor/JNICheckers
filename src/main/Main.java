@@ -12,6 +12,7 @@ public class Main extends JFrame {
     static {
         System.loadLibrary("checkers");
     }
+
     public static native int makeMove(int[] from, int[] to);
 
     public static native int getTile(int[] coordinates);
@@ -24,7 +25,7 @@ public class Main extends JFrame {
 
     public static JFrame frame = new JFrame();
 
-    public static void restart(){
+    public static void restart() {
         restartGame();
         board.update();
         frame.add(board);
@@ -32,7 +33,7 @@ public class Main extends JFrame {
         frame.revalidate();
     }
 
-    public static void init(){
+    public static void init() {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         frame.add(board);
@@ -50,6 +51,5 @@ public class Main extends JFrame {
 
     public static void main(String[] args) {
         init();
-
     }
 }
