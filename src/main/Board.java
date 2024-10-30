@@ -5,6 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.sound.sampled.*;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -12,7 +13,7 @@ public class Board extends JPanel {
     Tile[][] tiles;
     StateType state;
 
-    int[][] highlighted;
+    ArrayList<int[]> highlighted = new ArrayList<>();
 
     int focusedRow = 3;
     int focusedCol = 3;
@@ -32,7 +33,7 @@ public class Board extends JPanel {
                 tiles[i][j] = button;
                 button.setChecker(Main.getTile(button.coordinates));
                 button.addActionListener(tl);
-                button.addMouseListener((MouseAdapter)tl);
+                button.addMouseListener((MouseAdapter) tl);
                 this.add(button);
             }
         }
@@ -53,16 +54,23 @@ public class Board extends JPanel {
             case Whitewon -> "win.wav";
             case Tie -> "win.wav";
         };
-        SwingUtilities.invokeLater(() -> {
-            try (AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(filePath))) {
-                Clip clip = AudioSystem.getClip();
-                clip.open(audioStream);
-                clip.start();
-                clip.drain();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
+        Thread thread = new Thread(
+                new Runnable() {
+                    @Override
+                    public void run() {
+
+                        try (AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(filePath))) {
+                            Clip clip = AudioSystem.getClip();
+                            clip.open(audioStream);
+                            clip.start();
+                            clip.drain();
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+        );
+        thread.start();
     }
 
     public void update() {
@@ -95,17 +103,17 @@ public class Board extends JPanel {
     public void highlight() {
         Arrays.stream(tiles)
                 .flatMap(Arrays::stream)
-                .filter(t -> Arrays.stream(highlighted).anyMatch(c -> Arrays.equals(c, t.coordinates)))
+                .filter(t -> highlighted.stream().anyMatch(c -> Arrays.equals(c, t.coordinates)))
                 .forEach(tile ->
-                    tile.setHighlited(true)
-                    );
+                        tile.setHighlited(true)
+                );
         repaint();
     }
 
     public void dehighlightAll() {
         Arrays.stream(tiles).flatMap(Arrays::stream).forEach(t -> t.setHighlited(false));
         repaint();
-        highlighted = null;
+        highlighted.clear();
     }
 
 
@@ -116,32 +124,31 @@ public class Board extends JPanel {
 
 
     public void selectTile(Tile tile) {
-        tile.setSelected(true);
         dehighlightAll();
+        if (from == null) {
+            highlighted = new ArrayList<>(Arrays.asList(Main.getPossibleMoves(tile.coordinates)));
+            if (highlighted.size() == 0) {
+                return;
+            }
+            tile.setSelected(true);
+            highlighted.add(tile.coordinates);
+            from = tile;
+            highlight();
+            return;
+        }
         if (from == tile) {
             from.setSelected(false);
-            dehighlightAll();
             from = null;
             return;
         }
-        if (from != null) {
-            if (!oneTeamPieceSelected(from.coordinates, tile.coordinates)) {
-                tile.setSelected(false);
-                from.setSelected(false);
-                state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
-                update();
-                from = null;
-                return;
-            }
-            from.setSelected(false);
-        }
-        highlighted = Main.getPossibleMoves(tile.coordinates);
-        if (highlighted.length == 0) {
+        tile.setSelected(true);
+        if (!oneTeamPieceSelected(from.coordinates, tile.coordinates)) {
             tile.setSelected(false);
-            return;
+            state = StateType.values()[Main.makeMove(from.coordinates, tile.coordinates)];
+            update();
         }
-        from = tile;
-        highlight();
+        from.setSelected(false);
+        from = null;
     }
 
     boolean oneTeamPieceSelected(int[] from, int[] to) {
@@ -149,6 +156,7 @@ public class Board extends JPanel {
         int f = Main.getTile(from);
         return t != 0 && f % 2 == t % 2;
     }
+
     private class TileListener extends MouseAdapter implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -158,7 +166,7 @@ public class Board extends JPanel {
 
         @Override
         public void mouseEntered(MouseEvent e) {
-            int[] cords = ((Tile)e.getSource()).coordinates;
+            int[] cords = ((Tile) e.getSource()).coordinates;
             tiles[focusedRow][focusedCol].setFocused(false);
             focusedRow = cords[0];
             focusedCol = cords[1];
@@ -166,6 +174,7 @@ public class Board extends JPanel {
         }
 
     }
+
     private class BoardKeyListener extends KeyAdapter {
         @Override
         public void keyPressed(KeyEvent e) {
@@ -174,45 +183,58 @@ public class Board extends JPanel {
                 case KeyEvent.VK_DOWN -> 2;
                 case KeyEvent.VK_LEFT -> 3;
                 case KeyEvent.VK_RIGHT -> 4;
-                case KeyEvent.VK_ENTER ->  0;
+                case KeyEvent.VK_ENTER -> 0;
+                case KeyEvent.VK_ESCAPE -> 5;
                 default -> -1;
             };
-            if(direction==0){
+            if (direction == 0) {
                 selectTile(tiles[focusedRow][focusedCol]);
                 return;
             }
+            if(direction == 5){
+                tiles[focusedRow][focusedCol].setFocused(false);
+                int[] coords = highlighted.getLast();
+                selectTile(tiles[coords[0]][coords[1]]);
+                focusedRow = coords[0];
+                focusedCol = coords[1];
+                updateFocus();
+                return;
+            }
+
             tiles[focusedRow][focusedCol].setFocused(false);
-            if(highlighted!=null){
-                Optional<int[]>  coords=null;
-                switch(direction){
+            if (!highlighted.isEmpty()) {
+                Optional<int[]> coords;
+                switch (direction) {
                     case 1 -> {
-                        coords = Arrays.stream(highlighted).filter(t -> t[0]<focusedRow).findFirst();
+                        coords = highlighted.stream().filter(t -> t[0] < focusedRow).findFirst();
                     }
                     case 2 -> {
-                        coords = Arrays.stream(highlighted).filter(t -> t[0]>focusedRow).findFirst();
+                        coords = highlighted.stream().filter(t -> t[0] > focusedRow).findFirst();
                     }
                     case 3 -> {
-                        coords = Arrays.stream(highlighted).filter(t -> t[1]<focusedCol).findFirst();
+                        coords = highlighted.stream().filter(t -> t[1] < focusedCol).findFirst();
                     }
                     case 4 -> {
-                        coords = Arrays.stream(highlighted).filter(t -> t[1]>focusedCol).findFirst();
+                        coords = highlighted.stream().filter(t -> t[1] > focusedCol).findFirst();
                     }
-                    default -> {return;}
+                    default -> {
+                        return;
+                    }
                 }
 
-                if(coords.isEmpty()) return;
+                if (coords.isEmpty()) return;
                 focusedRow = coords.get()[0];
                 focusedCol = coords.get()[1];
-            }else{
-                switch(direction){
+            } else {
+                switch (direction) {
                     case 1 -> {
-                        focusedRow = focusedRow - 1 >=0 ? focusedRow - 1 : 7;
+                        focusedRow = focusedRow - 1 >= 0 ? focusedRow - 1 : 7;
                     }
                     case 2 -> {
                         focusedRow = focusedRow + 1 < 7 ? focusedRow + 1 : 0;
                     }
                     case 3 -> {
-                        focusedCol = focusedCol - 1 >=0 ? focusedCol - 1 : 7;
+                        focusedCol = focusedCol - 1 >= 0 ? focusedCol - 1 : 7;
                     }
                     case 4 -> {
                         focusedCol = focusedCol + 1 < 7 ? focusedCol + 1 : 0;

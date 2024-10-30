@@ -62,16 +62,16 @@ public class Tile extends JButton{
         g2d.setColor(color);
         g2d.fillRect(0, 0, getWidth(), getHeight());
 
+        if(isSelected()) {
+            g2d.setColor(Palette.SELECTED);
+            g2d.fillRect(2, 2, getWidth() - 4, getHeight() - 4);
+        }
         if(focused){
             g2d.setColor(Palette.FOCUSED);
             g2d.setStroke(new BasicStroke(12));
             g2d.drawRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
         }
 
-        if(isSelected()) {
-            g2d.setColor(Palette.SELECTED);
-            g2d.fillRect(2, 2, getWidth() - 4, getHeight() - 4);
-        }
 
         drawChecker(g2d);
     }
