@@ -1,0 +1,3 @@
+/home/levizor/Projects/JNICheckers/java/lib/cmake-build-debug/CMakeFiles/lib.dir
+/home/levizor/Projects/JNICheckers/java/lib/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/levizor/Projects/JNICheckers/java/lib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
